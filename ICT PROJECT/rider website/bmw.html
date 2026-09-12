@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>BMW</title>
+</head>
+
+<body>
+
+    <nav>
+
+        <h3>Riders<span>.</span></h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">companies</a></li>
+            <li><a href="home.html">Contact us</a></li>
+        </ul>
+
+        <div class="btn">
+            <button><a href="sign up.html">Sign up</a></button>
+            <button><a href="login.html">Login</a></button>
+        </div>
+
+
+    </nav>
+
+    <div class="back" onclick="back()">
+        <i class="fa-solid fa-chevron-left"></i>
+        <h4>BACK</h4>
+    </div>
+
+    <div class="c1">
+        <h2 class="name">BMW M 1000 XR</h2>
+    </div>
+
+    <main>
+
+        <div class="text">
+            <p>Invented: <span class="s1">2008</span></p>
+            <p>Released: <span class="s2">2009</span></p>
+            <p>CC: <span class="s3">1000 CC engine</span></p>
+            <p>Seater: <span class="s4">2 Seater</span></p>
+            <p>Petrol tank: <span class="s5">16.5 liters</span></p>
+            <p>Average per liter: <span class="s6">16 km per liter</span></p>
+            <p>Top speed: <span class="s7">303 km/h</span></p>
+            <p>Gear: <span class="s8">Six speed gear box</span></p>
+            <p style="line-height: 28px;">Braking system: <span class="s9">Dual 320mm disc brakes in the front and a single
+                220mm disc brake in the
+                rear.</span></p>
+            <p>Price: <span class="s10">12,600,000 rupees</span></p>
+
+        </div>
+
+        <div class="pic">
+            <img src="images\bikes pics\bmw-m-1000-r-5k-wallpaper-5120x2880-16126-removebg-preview.png" alt=""
+                id="image1">
+            <img src="images/bikes pics/wallpaperflare.com_wallpaper-removebg-preview.png" alt="" id="image2">
+            <img src="images\bikes pics\wp8169964-bmw-k1600-wallpapers-removebg-preview.png" alt="" id="image3">
+            <img src="images\bikes pics\wp13029051-bmw-f-900-xr-wallpapers-removebg-preview.png" alt="" id="image4" width="100%">
+        </div>
+
+    </main>
+
+
+    <div class="mid">
+        <div class="card">
+            <img src="images\bikes pics\bmw-m-1000-r-5k-wallpaper-5120x2880-16126-removebg-preview.png" alt=""
+                height="80px" class="rimage">
+            <h2 class="down">BMW M 1000 XR</h2>
+            <button class="down" onclick="changing ()">Explore</button>
+        </div>
+        <div class="card" id="card2">
+            <img src="images\bikes pics\wallpaperflare.com_wallpaper-removebg-preview.png" alt="" height="80px"
+                class="rimage" style="height: 80%;
+                width: 400px;
+                margin-left: 40px;">
+            <h2 class="down">BMW F 900 xr</h2>
+            <button class="down" onclick="changing2 ()">Explore</button>
+        </div>
+        <div class="card" id="card3">
+            <img src="images\bikes pics\wp8169964-bmw-k1600-wallpapers-removebg-preview.png" alt="" height="80px"
+                class="rimage" id="left" style="width: 450px; margin-left: 40px;">
+            <h2 class="down">BMW K 1600 GTL</h2>
+            <button class="down" onclick="changing3 ()">Explore</button>
+        </div>
+        <div class="card" id="card4">
+            <img src="images\bikes pics\wp13029051-bmw-f-900-xr-wallpapers-removebg-preview.png" alt="" height="80px"
+                class="rimage">
+            <h2 class="down">BMW S 900 XX</h2>
+            <button class="down" onclick="changing4 ()">Explore</button>
+        </div>
+
+    </div>
+
+    <script>
+
+   // Function to reset view and return to initial state
+   function back() {
+            // Move all bike images out of view
+            document.querySelectorAll('#image1, #image2, #image3, #image4').forEach(element => {
+                element.style.left = '-110%';
+                // element.style.transition = '0.1s ease-in';
+                // element.style.display = 'none';
+            });
+
+            // Adjust card styles and content
+            document.querySelector('.mid').style.height = '140vh';
+            document.querySelectorAll('.card').forEach(function (card) {
+                card.style.background = 'rgb(52 52 52)';
+                card.style.boxShadow = '4px 8px 12px black';
+            });
+
+            // Reset positions of elements
+            document.querySelectorAll('.down').forEach(function (down) {
+                down.style.bottom = '0%';
+            });
+            document.querySelectorAll('.rimage').forEach(function (image) {
+                image.style.left = '-18%';
+            });
+
+            document.querySelector('h4').style.left = '100%';
+            document.querySelector('i').style.left = '-100%';
+            document.querySelectorAll('p').forEach(function (p) {
+                p.style.left = '-100%';
+            });
+
+            // Smooth transitions
+            document.querySelectorAll('.rimage, .down').forEach(element => {
+                element.classList.transition = '2s ease-in-out';
+            });
+
+            document.querySelector('.name').style.top = '-100%';
+            document.querySelector('.name').style.transition = '.2s ease-in';
+        }
+
+        // Function to update content for bike 1
+        function changing() {
+            document.querySelector('.name').innerHTML = 'BMW M 1000 XR';
+            document.querySelector('.s1').innerHTML = '2008';
+            document.querySelector('.s2').innerHTML = '2009';
+            document.querySelector('.s3').innerHTML = '1000 CC engine';
+            document.querySelector('.s4').innerHTML = '2 Seater';
+            document.querySelector('.s5').innerHTML = '16.5 liters';
+            document.querySelector('.s6').innerHTML = '16 km per liter ';
+            document.querySelector('.s7').innerHTML = '303 km/h';
+            document.querySelector('.s8').innerHTML = 'Six speed gear box';
+            document.querySelector('.s9').innerHTML = 'Dual 320mm disc brakes in the front and a single 220mm disc brake in the rear.';
+            document.querySelector('.s10').innerHTML = '12,600,000 rupees';
+
+            // Show bike 1 image
+            document.querySelector('#image1').style.left = '15%';
+
+            // Adjust layout
+            document.querySelector('.mid').style.height = '55vh';
+            document.querySelectorAll('.card').forEach(function (card) {
+                card.style.background = 'none';
+                card.style.boxShadow = 'none';
+            });
+
+            // Move elements
+            document.querySelectorAll('.down').forEach(function (down) {
+                down.style.bottom = '-50%';
+            });
+
+            document.querySelectorAll('.rimage').forEach(function (image) {
+                image.style.left = '100%';
+            });
+
+            document.querySelector('h4').style.left = '0%';
+            document.querySelector('i').style.left = '0%';
+            document.querySelectorAll('p').forEach(function (p) {
+                p.style.left = '0%';
+            });
+
+            document.querySelector('.name').style.top = '20%';
+
+            //adding previous transition on click
+            document.querySelectorAll('.rimage, .down, .card').forEach(element => {
+                element.classList.add('transition');
+            });
+        }
+
+
+        function changing2() {
+            
+            document.querySelector('.name').innerHTML = 'BMW F 900 XR';
+            document.querySelector('.s1').innerHTML = '2020';
+            document.querySelector('.s2').innerHTML = 'April 14, 2022';
+            document.querySelector('.s3').innerHTML = '895 CC engine';
+            document.querySelector('.s4').innerHTML = '2 Seater';
+            document.querySelector('.s5').innerHTML = '15.5 liters';
+            document.querySelector('.s6').innerHTML = '23.8 km per liter ';
+            document.querySelector('.s7').innerHTML = '200 km/h';
+            document.querySelector('.s8').innerHTML = '6-speed constant mesh gearbox';
+            document.querySelector('.s9').innerHTML = 'Font brake  double disc brake Rear break  disc';
+            document.querySelector('.s10').innerHTML = '3,350,000 rupees';
+            document.querySelector('#image2').style.left = '15%';
+            document.querySelector('.mid').style.height = '55vh';
+            document.querySelectorAll('.card').forEach(function (card) {
+                card.style.background = 'none';
+                card.style.boxShadow = 'none';
+            });
+            document.querySelectorAll('.down').forEach(function (down) {
+                down.style.bottom = '-50%';
+            });
+            document.querySelectorAll('.rimage').forEach(function (image) {
+                image.style.left = '100%';
+            });
+            document.querySelector('h4').style.left = '0%';
+            document.querySelector('i').style.left = '0%';
+            document.querySelectorAll('p').forEach(function (p) {
+                p.style.left = '0%';
+            });
+            document.querySelector('.name').style.top = '20%';
+            
+        }
+
+        function changing3() {
+            
+            document.querySelector('.name').innerHTML = 'BMW K 1600 GTL';
+            document.querySelector('.s1').innerHTML = '2010';
+            document.querySelector('.s2').innerHTML = 'April 14, 2014';
+            document.querySelector('.s3').innerHTML = '1649 CC engine';
+            document.querySelector('.s4').innerHTML = '2 Seater';
+            document.querySelector('.s5').innerHTML = '15.5 liters';
+            document.querySelector('.s6').innerHTML = '23.4 km per liter ';
+            document.querySelector('.s7').innerHTML = '200 km/h';
+            document.querySelector('.s8').innerHTML = 'speed constant mesh gearbox';
+            document.querySelector('.s9').innerHTML = 'Font brake  double disc brake Rear break  disc';
+            document.querySelector('.s10').innerHTML = '8,350,000 rupees';
+            document.querySelector('#image3').style.left = '15%';
+            document.querySelector('.mid').style.height = '55vh';
+            document.querySelectorAll('.card').forEach(function (card) {
+                card.style.background = 'none';
+                card.style.boxShadow = 'none';
+            });
+            document.querySelectorAll('.down').forEach(function (down) {
+                down.style.bottom = '-50%';
+            });
+            document.querySelectorAll('.rimage').forEach(function (image) {
+                image.style.left = '100%';
+            });
+            document.querySelector('h4').style.left = '0%';
+            document.querySelector('i').style.left = '0%';
+            document.querySelectorAll('p').forEach(function (p) {
+                p.style.left = '0%';
+            });
+
+            document.querySelector('.name').style.top = '20%';
+
+        }
+
+        function changing4() {
+            
+            document.querySelector('.name').innerHTML = 'BMW S 900 XX';
+            document.querySelector('.s1').innerHTML = '2015';
+            document.querySelector('.s2').innerHTML = 'April 14, 2022';
+            document.querySelector('.s3').innerHTML = '1100 CC engine';
+            document.querySelector('.s4').innerHTML = '2 Seater';
+            document.querySelector('.s5').innerHTML = '15.5 liters';
+            document.querySelector('.s6').innerHTML = '23.8 km per liter ';
+            document.querySelector('.s7').innerHTML = '200 km/h';
+            document.querySelector('.s8').innerHTML = '5-speed constant mesh gearbox';
+            document.querySelector('.s9').innerHTML = 'Font brake  double disc brake Rear break  disc';
+            document.querySelector('.s10').innerHTML = '3,550,000 rupees';            document.querySelector('#image4').style.left = '15%';
+            document.querySelector('.mid').style.height = '55vh';
+            document.querySelectorAll('.card').forEach(function (card) {
+                card.style.background = 'none';
+                card.style.boxShadow = 'none';
+            });
+            document.querySelectorAll('.down').forEach(function (down) {
+                down.style.bottom = '-50%';
+            });
+            document.querySelectorAll('.rimage').forEach(function (image) {
+                image.style.left = '100%';
+            });
+            document.querySelector('h4').style.left = '0%';
+            document.querySelector('i').style.left = '0%';
+            document.querySelectorAll('p').forEach(function (p) {
+                p.style.left = '0%';
+            });
+    
+
+            document.querySelector('.name').style.top = '20%';
+
+        }
+
+    </script>
+
+</body>
+
+</html>

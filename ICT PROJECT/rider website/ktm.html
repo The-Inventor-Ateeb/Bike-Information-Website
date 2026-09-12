@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>KTM</title>
+</head>
+
+<body>
+
+    <nav>
+
+        <h3>Riders<span>.</span></h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">companies</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+
+        <div class="btn">
+            <button><a href="sign up.html">Sign up</a></button>
+            <button><a href="login.html">Login</a></button>
+        </div>
+
+
+    </nav>
+
+    <div class="back" onclick="back()">
+        <i class="fa-solid fa-chevron-left"></i>
+        <h4>BACK</h4>
+    </div>
+
+    <div class="c1">
+        <h2 class="name"></h2>
+    </div>
+
+    <main>
+
+        <div class="text">
+            <p>Invented: <span class="s1"></span></p>
+            <p>Released: <span class="s2"></span></p>
+            <p>CC: <span class="s3"></span></p>
+            <p>Seater: <span class="s4"></span></p>
+            <p>Petrol tank: <span class="s5"></span></p>
+            <p>Average per liter: <span class="s6"></span></p>
+            <p>Top speed: <span class="s7"></span></p>
+            <p>Gear: <span class="s8"></span></p>
+            <p style="line-height: 28px;">Braking system: <span class="s9"></span></p>
+            <p>Price: <span class="s10"></span></p>
+
+        </div>
+
+        <div class="pic">
+            <img src="images\bikes pics\KTM_RC-390-removebg-preview.png" alt=""
+                id="image1" style="transform: rotateY(180deg); width: 95%; ">
+            <img src="images\bikes pics\KTM_200_DUKE-removebg-preview__1_-removebg-preview.png" alt="" id="image2">
+            <img src="images\bikes pics\bmw-m-1000-r-5k-wallpaper-5120x2880-16126-removebg-preview.png" alt="" id="image3">
+            <img src="images\bikes pics\KTM_1290_Super_Duke-removebg-preview.png" alt="" id="image4" style="    top: 22px;
+            width: 70%;
+            height: 90%;">
+        </div>
+
+    </main>
+
+
+    <div class="mid">
+        <div class="card">
+            <img src="images\bikes pics\KTM_RC-390-removebg-preview.png" alt=""
+                height="80px" class="rimage" style="transform: rotateY(180deg)">
+            <h2 class="down">KTM_RC-390</h2>
+            <button class="down" onclick="changing ()">Explore</button>
+        </div>
+        <div class="card" id="card2">
+            <img src="images\bikes pics\KTM_200_DUKE-removebg-preview__1_-removebg-preview.png" alt="" height="80px"
+                class="rimage" style="height: 80%;
+                width: 400px;
+                margin-left: 40px;">
+            <h2 class="down">KTM_200_DUKE</h2>
+            <button class="down" onclick="changing2 ()">Explore</button>
+        </div>
+        <div class="card" id="card3">
+            <img src="images\bikes pics\bmw-m-1000-r-5k-wallpaper-5120x2880-16126-removebg-preview.png" alt="" height="80px"
+                class="rimage" id="left" style="width: 450px; margin-left: 40px;">
+            <h2 class="down">KTM_DUKE_10</h2>
+            <button class="down" onclick="changing3 ()">Explore</button>
+        </div>
+        <div class="card" id="card4">
+            <img src="images\bikes pics\KTM_1290_Super_Duke-removebg-preview.png" alt="" height="80px"
+                class="rimage" style="    width: 100%;
+                height: 70%;
+                margin-left: 55px;">
+            <h2 class="down" style="top: 30px;">KTM_1290_Super_Duke</h2>
+            <button class="down" onclick="changing4 ()" style="top: 30px;">Explore</button>
+        </div>
+
+    </div>
+
+    <script>
+
+   // Function to reset view and return to initial state
+   function back() {
+            // Move all bike images out of view
+            document.querySelectorAll('#image1, #image2, #image3, #image4').forEach(element => {
+                element.style.left = '-110%';
+                // element.style.transition = '0.1s ease-in';
+                // element.style.display = 'none';
+            });
+
+            // Adjust card styles and content
+            document.querySelector('.mid').style.height = '140vh';
+            document.querySelectorAll('.card').forEach(function (card) {
+                card.style.background = 'rgb(52 52 52)';
+                card.style.boxShadow = '4px 8px 12px black';
+            });
+
+            // Reset positions of elements
+            document.querySelectorAll('.down').forEach(function (down) {
+                down.style.bottom = '0%';
+            });
+            document.querySelectorAll('.rimage').forEach(function (image) {
+                image.style.left = '-18%';
+            });
+
+            document.querySelector('h4').style.left = '100%';
+            document.querySelector('i').style.left = '-100%';
+            document.querySelectorAll('p').forEach(function (p) {
+                p.style.left = '-100%';
+            });
+
+            // Smooth transitions
+            document.querySelectorAll('.rimage, .down').forEach(element => {
+                element.classList.transition = '2s ease-in-out';
+            });
+
+            document.querySelector('.name').style.top = '-100%';
+            document.querySelector('.name').style.transition = '.2s ease-in';
+        }
+
+        // Function to update content for bike 1
+        function changing() {
+            document.querySelector('.name').innerHTML = 'KTM RC-390';
+            document.querySelector('.s1').innerHTML = '2000';
+            document.querySelector('.s2').innerHTML = '2002';
+            document.querySelector('.s3').innerHTML = '937 CC engine';
+            document.querySelector('.s4').innerHTML = '2 Seater';
+            document.querySelector('.s5').innerHTML = '14 liters';
+            document.querySelector('.s6').innerHTML = '19 km per liter ';
+            document.querySelector('.s7').innerHTML = '299 km/h';
+            document.querySelector('.s8').innerHTML = '6-speed manual, wet multi-plate clutch, chain final drive';
+            document.querySelector('.s9').innerHTML = 'Disc brakes';
+            document.querySelector('.s10').innerHTML = '7,600,000 rupees';
+
+            // Show bike 1 image
+            document.querySelector('#image1').style.left = '15%';
+
+            // Adjust layout
+            document.querySelector('.mid').style.height = '55vh';
+            document.querySelectorAll('.card').forEach(function (card) {
+                card.style.background = 'none';
+                card.style.boxShadow = 'none';
+            });
+
+            // Move elements
+            document.querySelectorAll('.down').forEach(function (down) {
+                down.style.bottom = '-50%';
+            });
+
+            document.querySelectorAll('.rimage').forEach(function (image) {
+                image.style.left = '100%';
+            });
+
+            document.querySelector('h4').style.left = '0%';
+            document.querySelector('i').style.left = '0%';
+            document.querySelectorAll('p').forEach(function (p) {
+                p.style.left = '0%';
+            });
+
+            document.querySelector('.name').style.top = '20%';
+
+            //adding previous transition on click
+            document.querySelectorAll('.rimage, .down, .card').forEach(element => {
+                element.classList.add('transition');
+            });
+        }
+
+
+        function changing2() {
+            
+            document.querySelector('.name').innerHTML = 'KTM 200-DUKE';
+            document.querySelector('.s1').innerHTML = '2012';
+            document.querySelector('.s2').innerHTML = '2014';
+            document.querySelector('.s3').innerHTML = '200 CC engine';
+            document.querySelector('.s4').innerHTML = '2 Seater';
+            document.querySelector('.s5').innerHTML = '13.5 liters';
+            document.querySelector('.s6').innerHTML = '35 km per liter ';
+            document.querySelector('.s7').innerHTML = '142 km/h';
+            document.querySelector('.s8').innerHTML = '6-speed gearbox';
+            document.querySelector('.s9').innerHTML = 'Disc brake';
+            document.querySelector('.s10').innerHTML = '3,800,000 rupees';
+            document.querySelector('#image2').style.left = '15%';
+            document.querySelector('.mid').style.height = '55vh';
+            document.querySelectorAll('.card').forEach(function (card) {
+                card.style.background = 'none';
+                card.style.boxShadow = 'none';
+            });
+            document.querySelectorAll('.down').forEach(function (down) {
+                down.style.bottom = '-50%';
+            });
+            document.querySelectorAll('.rimage').forEach(function (image) {
+                image.style.left = '100%';
+            });
+            document.querySelector('h4').style.left = '0%';
+            document.querySelector('i').style.left = '0%';
+            document.querySelectorAll('p').forEach(function (p) {
+                p.style.left = '0%';
+            });
+            document.querySelector('.name').style.top = '20%';
+            
+        }
+
+        function changing3() {
+            
+            document.querySelector('.name').innerHTML = 'KTM_DUKE_10';
+            document.querySelector('.s1').innerHTML = '2014';
+            document.querySelector('.s2').innerHTML = '2015';
+            document.querySelector('.s3').innerHTML = '390 CC engine';
+            document.querySelector('.s4').innerHTML = '2 Seater';
+            document.querySelector('.s5').innerHTML = '13.5 liters';
+            document.querySelector('.s6').innerHTML = '25.89 km per liter ';
+            document.querySelector('.s7').innerHTML = '167 km/h';
+            document.querySelector('.s8').innerHTML = '6-speed gearbox';
+            document.querySelector('.s9').innerHTML = 'Disc brakes';
+            document.querySelector('.s10').innerHTML = '3,90,000 rupees';
+            document.querySelector('#image3').style.left = '15%';
+            document.querySelector('.mid').style.height = '55vh';
+            document.querySelectorAll('.card').forEach(function (card) {
+                card.style.background = 'none';
+                card.style.boxShadow = 'none';
+            });
+            document.querySelectorAll('.down').forEach(function (down) {
+                down.style.bottom = '-50%';
+            });
+            document.querySelectorAll('.rimage').forEach(function (image) {
+                image.style.left = '100%';
+            });
+            document.querySelector('h4').style.left = '0%';
+            document.querySelector('i').style.left = '0%';
+            document.querySelectorAll('p').forEach(function (p) {
+                p.style.left = '0%';
+            });
+
+            document.querySelector('.name').style.top = '20%';
+
+        }
+
+        function changing4() {
+            
+            document.querySelector('.name').innerHTML = 'KTM_1290_Super_Duke';
+            document.querySelector('.s1').innerHTML = '2015';
+            document.querySelector('.s2').innerHTML = 'April 14, 2022';
+            document.querySelector('.s3').innerHTML = '1000 CC engine';
+            document.querySelector('.s4').innerHTML = '2 Seater';
+            document.querySelector('.s5').innerHTML = '12.5 liters';
+            document.querySelector('.s6').innerHTML = '23.8 km per liter ';
+            document.querySelector('.s7').innerHTML = '200 km/h';
+            document.querySelector('.s8').innerHTML = '5-speed constant mesh gearbox';
+            document.querySelector('.s9').innerHTML = 'Font brake  double disc brake Rear break  disc';
+            document.querySelector('.s10').innerHTML = '6,550,000 rupees';          
+            document.querySelector('#image4').style.left = '15%';
+            document.querySelector('.mid').style.height = '55vh';
+            document.querySelectorAll('.card').forEach(function (card) {
+                card.style.background = 'none';
+                card.style.boxShadow = 'none';
+            });
+            document.querySelectorAll('.down').forEach(function (down) {
+                down.style.bottom = '-50%';
+            });
+            document.querySelectorAll('.rimage').forEach(function (image) {
+                image.style.left = '100%';
+            });
+            document.querySelector('h4').style.left = '0%';
+            document.querySelector('i').style.left = '0%';
+            document.querySelectorAll('p').forEach(function (p) {
+                p.style.left = '0%';
+            });
+    
+
+            document.querySelector('.name').style.top = '20%';
+
+        }
+
+    </script>
+
+</body>
+
+</html>

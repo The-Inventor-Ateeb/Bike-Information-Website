@@ -1,0 +1,623 @@
+@font-face {
+    font-family: "Sakana";
+    src: url('fonts/Sakana.woff2') format('woff2'),
+        url('fonts/Sakana.woff') format('woff'),
+        url('fonts/Sakana.ttf') format('truetype');
+}
+
+@keyframes image {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(0.9rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+* {
+
+    margin: auto;
+    color: white;
+    padding: 0%;
+    text-decoration: none;
+
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background-color: #1c1c1c;
+    
+}
+
+p span {
+    font-style: normal;
+    font-weight: normal;
+    border: none;
+}
+
+.mid span,
+main p {
+    font-style: normal;
+    font-weight: 600;
+    border-bottom: 2px solid #F7931E;
+}
+
+main p {
+    border: none;
+}
+
+h1 span,
+h3 span,
+.c1 {
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #F7931E;
+}
+
+h2 span,
+main p {
+    color: #F7931E;
+}
+
+h2 {
+    line-height: 60px;
+}
+
+p {
+    margin-bottom: 8px;
+    margin-top: 14px;
+    line-height: 19px;
+}
+
+img {
+    filter: drop-shadow(1px 1px 1px #F7931E);
+}
+
+nav ul li a:hover{
+    color: #F7931E;
+    transition: 0.5s ease-in-out;
+}
+
+
+.main-video {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+video {
+    position: absolute;
+    left: 0%;
+    top: -2%;
+    width: 120%;
+    transition: 1s ease-in-out;
+}
+
+.main {
+    position: absolute;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    width: 105vw;
+    height: 100%;
+    margin: 0px -40px;
+}
+
+
+nav {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+}
+
+nav::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: -1;
+    background: rgb(63, 63, 63);
+}
+
+h3 {
+    margin-top: -12px;
+    margin-right: 20rem;
+}
+
+ul,
+li,
+a {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    margin: 6px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn {
+    margin-left: 20rem;
+}
+
+button {
+    right: 0%;
+    cursor: pointer;
+    color: #F7931E;
+    font-family: inherit;
+    display: inline-block;
+    width: 90px;
+    margin: 0rem .3rem;
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #F7931E;
+    transition: color .5s;
+    background: transparent;
+    border-radius: 9px;
+}
+
+button a {
+    color: #F7931E;
+    font-size: 13px;
+    font-weight: 900;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: #F7931E;
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+button:hover a,
+button:hover {
+    color: #fff;
+}
+
+.card button:hover {
+    color: #fff;
+    background: #F7931E;
+    transition: 0.5s;
+}
+
+
+button:active:before {
+    background: #F7931E;
+    transition: background 0s;
+}
+
+.Welcome {
+    position: absolute;
+    top: 0%;
+    text-align: center;
+    width: 450px;
+    height: 300px;
+    margin-top: 30vh;
+    transition: 1s;
+    z-index: 1;
+}
+
+.Welcome h1,
+.c1 h2 {
+    letter-spacing: 2px;
+    font-family: "Sakana";
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.Welcome button {
+    margin-top: 10px;
+    width: 130px;
+}
+
+
+.first {
+    position: relative;
+    left: -100%;
+    width: 430px;
+    height: 270px;
+    transition: 1.5s;
+    margin-left: 9vw;
+}
+
+
+
+.image {
+    width: 700px;
+    height: 401px;
+    overflow: hidden;
+    animation: image 4s ease-in-out infinite;
+    filter: drop-shadow(7px 10px 5px black);
+}
+
+.image img {
+    position: relative;
+    bottom: -100%;
+    transition: 1.5s;
+}
+
+.social {
+    position: fixed;
+    top: 38%;
+    right: 0%;
+    margin-right: -4rem;
+    display: flex;
+    flex-direction: column;
+    transition: 1.5s ease-in;
+}
+
+/* .social li {
+    position: relative;
+    list-style: none;
+    right: -100%;
+    transition: 1s;
+} */
+
+.social a {
+    margin: 1rem .5rem;
+    color: #F7931E;
+    padding: 6px;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #F7931E;
+    border-radius: 50%;
+}
+
+
+.social a:hover {
+    background: #F7931E;
+    color: white;
+    transition: .3s ease-in;
+}
+
+.bikes {
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    width: 91vw;
+    height: 100vh;
+    transition: 1.5s;
+    /* background: black; */
+}
+
+.bikes h2 {
+    margin-top: 60px;
+    font-weight: 800;
+    font-size: 26px;
+}
+
+
+.card {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    height: 369px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(52 52 52);
+    box-shadow: 4px 8px 12px black;
+    border-radius: 35px;
+    padding: 0px 20px;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100px;
+    margin-bottom: 9px;
+    margin-top: 0px;
+}
+
+.card h2 {
+    line-height: 0;
+    margin-bottom: 0;
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #F7931E;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper {
+    margin-top: -80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: 2%;
+    height: 90%;
+    width: 78%;
+}
+
+/* Bikes portion */
+
+.mid {
+    /* z-index: 1111; */
+    position: absolute;
+    top: 12%;
+    left: 18vw;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    row-gap: 6%;
+    width: 65vw;
+    padding-bottom: 7%;
+    overflow: hidden;
+}
+
+.mid .card {
+    /* position: absolute; */
+    overflow: hidden;
+    margin: auto;
+    height: 400px;
+    padding-bottom: 25px;
+    width: 400px;
+    transition: .1s ease-in-out;
+}
+
+.mid .card img {
+    width: 500px;
+    height: 100%;
+    margin-bottom: -23px;
+    position: relative;
+    left: -12%;
+    transition: .3s ease-in-out;
+}
+
+.mid h2 {
+    margin-bottom: 4px;
+    border-bottom: 3px solid white;
+    font-weight: 800;
+    line-height: 1.5;
+    transition: .3s ease-in;
+}
+
+.mid button {
+    width: 160px;
+    height: 35px;
+    transition: .25s ease-in-out;
+}
+
+.mid h2,
+.mid button {
+    position: relative;
+    bottom: 0%;
+}
+
+main {
+    position: absolute;
+    top: 25vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.back {
+    overflow: hidden;
+    width: 90px;
+    display: flex;
+    position: absolute;
+    top: 10vh;
+    left: 3%;
+    transition: 1s ease-in-out;
+}
+
+.back i {
+    position: relative;
+    left: -50%;
+    cursor: pointer;
+    padding: 5px;
+    width: 16px;
+    text-align: center;
+    border-radius: 65%;
+    border: 3px solid #F7931E;
+    opacity: 0.7;
+    transition: .8s ease-in-out;
+}
+
+.back h4 {
+    position: relative;
+    left: 55%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: .4;
+    transition: .8s ease-in-out;
+}
+
+.back i:hover {
+    opacity: 1;
+    color: #F7931E;
+}
+
+.back:hover h4 {
+    opacity: 1;
+}
+
+.c1 {
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 700px;
+    height: 100px;
+    top: 10%;
+    left: 30%;
+}
+
+.c1 h2 {
+    position: absolute;
+    top: -100%;
+    color: #F7931E;
+    border-bottom: 4px solid white;
+    transition: 1s ease-in-out;
+}
+
+main .pic {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 70vw;
+    height: 84vh;
+    top: -15vh;
+    right: -11vw;
+}
+
+main img {
+    position: absolute;
+    left: -100%;
+    top: 0%;
+    height: 600px;
+    transition: 1s ease-in-out;
+}
+
+main .text {
+    overflow: hidden;
+    position: absolute;
+    top: 2vh;
+    left: 3%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 590px;
+}
+
+main p {
+    position: relative;
+    left: -110%;
+    font-size: 18px;
+    margin-left: 0px;
+    padding-left: 50px;
+    letter-spacing: 1px;
+    transition: 1s ease-in-out;
+}
+
+/* sign up , login and contact form */
+
+#Contact {
+    position: absolute;
+    left: 35%;
+    top: 11%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+form div input , textarea {
+    padding: 8px 15px;
+}
+
+#Contact form {
+    font-size: 20px;
+    gap: 1.5rem;
+    padding-top: 10px;
+    margin: 8px 0px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.butto .input {
+    color: white;
+    font-weight: 600;
+    padding-left: 18px;
+    border: none;
+    background-color: rgba(0, 0, 0, .1);
+    box-shadow: 0px 2px 6px #F7931E;
+    border-radius: 10px;
+    width: 400px;
+    height: 45px;
+}
+
+/* form .t {
+    color: white;
+    font-weight: 600;
+    padding: 17px 11px;
+    width: 400px;
+    height: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, .1);
+    border-bottom: 2px solid #F7931E;
+    box-shadow: inset 0px 2px 6px yellowgreen;
+
+} */
+
+form textarea {
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    width: 400px;
+    height: 100px;
+    border: none;
+    background-color: rgba(0, 0, 0, .1);
+    border-bottom: 2px solid #F7931E;
+    box-shadow: 0px 2px 6px #F7931E;
+    border-radius: 15px;
+    resize: none;
+
+}
+
+form div input {
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 750;
+    font-size: 17px;
+    width: 80px;
+    color: #F7931E;
+    background: transparent;
+    border: 3px solid #F7931E;
+    border-radius: 15px;
+    transition: .5s ease-in;
+}
+
+form div input:hover {
+    color: white;
+    background-color: #F7931E;
+    cursor: pointer;
+}
+
+form div input::placeholder {
+    color: white;
+}
